@@ -137,7 +137,8 @@ if df is not None:
             pay_3 = p3.selectbox("Jul (PAY_3)", options=pay_opts, index=pay_opts.index(sample_profile['PAY_3']) if sample_profile else pay_opts.index(0))
             pay_4 = p4.selectbox("Jun (PAY_4)", options=pay_opts, index=pay_opts.index(sample_profile['PAY_4']) if sample_profile else pay_opts.index(0))
             pay_5 = p5.selectbox("May (PAY_5)", options=pay_opts, index=pay_opts.index(sample_profile['PAY_5']) if sample_profile else pay_opts.index(0))
-            pay_6 = p6.selectbox("Oct (PAY_6)", options=pay_opts, index=pay_opts.index(sample_profile['PAY_6']) if sample_profile else pay_opts.index(0))
+            # Fixed: Changed Oct to Apr
+            pay_6 = p6.selectbox("Apr (PAY_6)", options=pay_opts, index=pay_opts.index(sample_profile['PAY_6']) if sample_profile else pay_opts.index(0))
 
             with st.expander("Bill Amounts & Previous Payments (Optional Detail)", expanded=False):
                 b1, b2, b3, b4, b5, b6 = st.columns(6)
@@ -146,7 +147,8 @@ if df is not None:
                 bill_amt3 = b3.number_input("Bill Jul", value=sample_profile['BILL_AMT3'] if sample_profile else 10000)
                 bill_amt4 = b4.number_input("Bill Jun", value=sample_profile['BILL_AMT4'] if sample_profile else 10000)
                 bill_amt5 = b5.number_input("Bill May", value=sample_profile['BILL_AMT5'] if sample_profile else 10000)
-                bill_amt6 = b6.number_input("Bill Oct", value=sample_profile['BILL_AMT6'] if sample_profile else 10000)
+                # Fixed: Changed Bill Oct to Bill Apr
+                bill_amt6 = b6.number_input("Bill Apr", value=sample_profile['BILL_AMT6'] if sample_profile else 10000)
 
                 a1, a2, a3, a4, a5, a6 = st.columns(6)
                 pay_amt1 = a1.number_input("Paid Sep", value=sample_profile['PAY_AMT1'] if sample_profile else 1000)
@@ -154,7 +156,8 @@ if df is not None:
                 pay_amt3 = a3.number_input("Paid Jul", value=sample_profile['PAY_AMT3'] if sample_profile else 1000)
                 pay_amt4 = a4.number_input("Paid Jun", value=sample_profile['PAY_AMT4'] if sample_profile else 1000)
                 pay_amt5 = a5.number_input("Paid May", value=sample_profile['PAY_AMT5'] if sample_profile else 1000)
-                pay_amt6 = a6.number_input("Paid Oct", value=sample_profile['PAY_AMT6'] if sample_profile else 1000)
+                # Fixed: Changed Paid Oct to Paid Apr
+                pay_amt6 = a6.number_input("Paid Apr", value=sample_profile['PAY_AMT6'] if sample_profile else 1000)
 
             submit_button = st.form_submit_button("Predict Default Risk", use_container_width=True)
 
