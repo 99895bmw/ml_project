@@ -97,7 +97,7 @@ if df is not None:
         if col_preset1.button("Load High Risk Sample"):
             sample_profile = {
                 'LIMIT_BAL': 20000, 'SEX': 1, 'EDUCATION': 2, 'MARRIAGE': 1, 'AGE': 28,
-                'PAY_0': 2, 'PAY_2': 2, 'PAY_3': 0, 'PAY_4': 0, 'PAY_5': 0, 'PAY_6': 0,
+                'PAY_0': 2, 'PAY_2': 2, 'PAY_3': 3, 'PAY_4': 4, 'PAY_5': 5, 'PAY_6': 6,
                 'BILL_AMT1': 18000, 'BILL_AMT2': 19000, 'BILL_AMT3': 18500, 'BILL_AMT4': 19200, 'BILL_AMT5': 19500, 'BILL_AMT6': 20000,
                 'PAY_AMT1': 0, 'PAY_AMT2': 1000, 'PAY_AMT3': 0, 'PAY_AMT4': 500, 'PAY_AMT5': 0, 'PAY_AMT6': 0
             }
